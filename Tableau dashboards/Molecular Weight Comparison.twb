@@ -1,0 +1,386 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20263.26.1015.1742                               -->
+<workbook _.fcp.WorkbookFingerprinting.true...author-id='6af690e2de249bc7a954df4113bfd0e5ba1de27f04215d7e23fb14eb22e3320b' _.fcp.WorkbookFingerprinting.true...creator-author-id='6af690e2de249bc7a954df4113bfd0e5ba1de27f04215d7e23fb14eb22e3320b' _.fcp.WorkbookFingerprinting.true...creator-license-type='public' _.fcp.WorkbookFingerprinting.true...creator-machine-id='6af690e2de249bc7a954df4113bfd0e5ba1de27f04215d7e23fb14eb22e3320b' _.fcp.WorkbookFingerprinting.true...license-type='public' _.fcp.WorkbookFingerprinting.true...machine-id='6af690e2de249bc7a954df4113bfd0e5ba1de27f04215d7e23fb14eb22e3320b' original-version='18.1' source-build='2026.3.0 (20263.26.1015.1742)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <_.fcp.WorkbookFingerprinting.true...WorkbookFingerprinting />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='compound_comparison' inline='true' name='federated.0cosi0c04ceamk1fhzct41fdnahv' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='compound_comparison' name='textscan.0v3nbku0yu7vpm14z72hc1xehl8q'>
+            <connection class='textclean' cleaning='yes' compat='no' csvFile='C:/Users/phill/OneDrive/Documents/Data Science/Projects/Pharmalab_Analyzer/results/compound_comparison.csv' dataRefreshTime='' directory='C:/Users/phill/OneDrive/Documents/Data Science/Projects/Pharmalab_Analyzer/results' filename='C:/Users/phill/AppData/Local/Temp/TableauTemp/0ghqn1i0ipthu41g2jqja17s5aoz/compound_comparison.csv.xlsx' interpretationMode='8' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0v3nbku0yu7vpm14z72hc1xehl8q' name='compound_comparison.csv' table='[compound_comparison#csv$]' type='table'>
+          <columns character-set='UTF-8' gridOrigin='A1:D4:no:A1:D4:1' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='chembl_id' ordinal='0' />
+            <column datatype='string' name='compound_name' ordinal='1' />
+            <column datatype='string' name='molecular_formula' ordinal='2' />
+            <column datatype='real' name='molecular_weight' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[compound_comparison.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D4:no:A1:D4:1&quot;</attribute>
+              <attribute datatype='integer' name='lost'>0</attribute>
+              <attribute datatype='integer' name='outcome'>1</attribute>
+              <attribute datatype='integer' name='processed'>3</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>chembl_id</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[chembl_id]</local-name>
+            <parent-name>[compound_comparison.csv]</parent-name>
+            <remote-alias>chembl_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[compound_comparison.csv_FC7DEE7CA0CF41A1ABC803C6B537B7AB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>compound_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[compound_name]</local-name>
+            <parent-name>[compound_comparison.csv]</parent-name>
+            <remote-alias>compound_name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[compound_comparison.csv_FC7DEE7CA0CF41A1ABC803C6B537B7AB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>molecular_formula</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[molecular_formula]</local-name>
+            <parent-name>[compound_comparison.csv]</parent-name>
+            <remote-alias>molecular_formula</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[compound_comparison.csv_FC7DEE7CA0CF41A1ABC803C6B537B7AB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>molecular_weight</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[molecular_weight]</local-name>
+            <parent-name>[compound_comparison.csv]</parent-name>
+            <remote-alias>molecular_weight</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[compound_comparison.csv_FC7DEE7CA0CF41A1ABC803C6B537B7AB]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='compound_comparison.csv' datatype='table' name='[__tableau_internal_object_id__].[compound_comparison.csv_FC7DEE7CA0CF41A1ABC803C6B537B7AB]' role='measure' type='quantitative' />
+      <column caption='Chembl Id' datatype='string' name='[chembl_id]' role='dimension' type='nominal' />
+      <column caption='Compound Name' datatype='string' name='[compound_name]' role='dimension' type='nominal' />
+      <column caption='Molecular Formula' datatype='string' name='[molecular_formula]' role='dimension' type='nominal' />
+      <column caption='Molecular Weight' datatype='real' name='[molecular_weight]' role='measure' type='quantitative' />
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/phill/AppData/Local/Temp/TableauTemp/#TableauTemp_0129hq5127q19y1e3v7op1pjgqq4.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='10/23/2026 06:37:16 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>chembl_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[chembl_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>chembl_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>compound_comparison.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[compound_comparison.csv_FC7DEE7CA0CF41A1ABC803C6B537B7AB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>compound_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[compound_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>compound_name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>compound_comparison.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[compound_comparison.csv_FC7DEE7CA0CF41A1ABC803C6B537B7AB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>molecular_formula</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[molecular_formula]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>molecular_formula</remote-alias>
+              <ordinal>2</ordinal>
+              <family>compound_comparison.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[compound_comparison.csv_FC7DEE7CA0CF41A1ABC803C6B537B7AB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>molecular_weight</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[molecular_weight]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>molecular_weight</remote-alias>
+              <ordinal>3</ordinal>
+              <family>compound_comparison.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[compound_comparison.csv_FC7DEE7CA0CF41A1ABC803C6B537B7AB]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='compound_comparison.csv' id='compound_comparison.csv_FC7DEE7CA0CF41A1ABC803C6B537B7AB'>
+            <properties context=''>
+              <relation connection='textscan.0v3nbku0yu7vpm14z72hc1xehl8q' name='compound_comparison.csv' table='[compound_comparison#csv$]' type='table'>
+                <columns character-set='UTF-8' gridOrigin='A1:D4:no:A1:D4:1' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='chembl_id' ordinal='0' />
+                  <column datatype='string' name='compound_name' ordinal='1' />
+                  <column datatype='string' name='molecular_formula' ordinal='2' />
+                  <column datatype='real' name='molecular_weight' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Molecular Weight Comparison</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='compound_comparison' name='federated.0cosi0c04ceamk1fhzct41fdnahv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0cosi0c04ceamk1fhzct41fdnahv'>
+            <column caption='Compound Name' datatype='string' name='[compound_name]' role='dimension' type='nominal' />
+            <column caption='Molecular Weight' datatype='real' name='[molecular_weight]' role='measure' type='quantitative' />
+            <column-instance column='[compound_name]' derivation='None' name='[none:compound_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[molecular_weight]' derivation='Sum' name='[sum:molecular_weight:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.0cosi0c04ceamk1fhzct41fdnahv].[none:compound_name:nk]' value='18' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0cosi0c04ceamk1fhzct41fdnahv].[sum:molecular_weight:qk]</rows>
+        <cols>[federated.0cosi0c04ceamk1fhzct41fdnahv].[none:compound_name:nk]</cols>
+      </table>
+      <simple-id uuid='{169DBC1C-5A53-47F5-92A6-87CEB345F2F2}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0cosi0c04ceamk1fhzct41fdnahv].[none:compound_name:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{4DAAF523-63E9-4CC8-A6DD-DADF8DC61392}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      CUAo7f8Bk35pPq0dYnYAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>

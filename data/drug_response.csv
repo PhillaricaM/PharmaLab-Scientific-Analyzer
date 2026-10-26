@@ -1,0 +1,10 @@
+compound_id,concentration_uM,inhibition_percent
+CMPD-001,0.1,5
+CMPD-001,0.5,12
+CMPD-001,1.0,20
+CMPD-001,2.5,35
+CMPD-001,5.0,52
+CMPD-001,10.0,75
+CMPD-001,20.0,89
+CMPD-001,50.0,96
+CMPD-001,100.0,99

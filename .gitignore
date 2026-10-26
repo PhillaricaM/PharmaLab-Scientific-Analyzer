@@ -1,0 +1,45 @@
+# ==========================================
+# PharmaLab Scientific Analyzer
+# Git Ignore Rules
+# ==========================================
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Testing and development cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environment variables and sensitive files
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# VS Code local settings
+.vscode/
+
+# Temporary files and logs
+*.log
+*.tmp
+pharmalab_debug.txt
+git_review.txt
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
