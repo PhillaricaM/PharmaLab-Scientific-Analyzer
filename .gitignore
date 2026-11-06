@@ -43,3 +43,6 @@ Thumbs.db
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
+
+# Downloaded GDC gene-expression datasets
+data/gdc/
