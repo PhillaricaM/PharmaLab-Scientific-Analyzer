@@ -1,0 +1,6 @@
+gene_id,gene_name,gene_type,unstranded,tpm_unstranded
+ENSG00000141736.14,ERBB2,protein_coding,38670,257.4313
+ENSG00000141510.18,TP53,protein_coding,5481,66.3478
+ENSG00000148773.14,MKI67,protein_coding,3948,21.118
+ENSG00000012048.23,BRCA1,protein_coding,2340,17.2767
+ENSG00000139618.16,BRCA2,protein_coding,895,4.8031
