@@ -9,11 +9,11 @@
 
 ---
 
-## 1. Overview
+## 1. Project Overview
 
 PharmaLab Scientific Analyzer is a Python-based scientific software engineering project designed to retrieve, validate, process, analyze, and visualize publicly available pharmaceutical and biomedical research data.
 
-The project integrates multiple scientific data sources, including the **ChEMBL REST API** and the **National Cancer Institute (NCI) Genomic Data Commons (GDC) API**, to support molecular compound analysis and cancer gene-expression research.
+The project integrates multiple scientific data sources, including the **ChEMBL REST API** and the **National Cancer Institute (NCI) Genomic Data Commons (GDC) REST API**, to support pharmaceutical compound analysis and cancer gene-expression research.
 
 PharmaLab currently supports two primary scientific workflows:
 
@@ -22,11 +22,68 @@ PharmaLab currently supports two primary scientific workflows:
 
 The long-term objective is to develop PharmaLab into a modular scientific analysis platform supporting pharmaceutical research, computational oncology, biomedical data visualization, and machine-learning-assisted research workflows.
 
-This project is developed as part of an ongoing scientific software engineering portfolio focused on creating practical applications for biotechnology, pharmaceutical development, and cancer research.
+This project is part of an ongoing scientific software engineering portfolio focused on developing practical applications for biotechnology, pharmaceutical development, and cancer research.
 
 ---
 
-## 2. Technologies and Development Tools
+## 2. Interactive Tableau Dashboards
+
+PharmaLab includes two published Tableau Public dashboards that transform Python-generated scientific datasets into interactive research visualizations.
+
+**Click either dashboard screenshot to open its live, interactive Tableau Public dashboard.**
+
+### Dashboard 1 — Pharmaceutical Compound Analysis
+
+**Data Source:** ChEMBL Database  
+**Technologies:** Python, pandas, ChEMBL REST API, Tableau Public
+
+This dashboard explores the molecular properties of three pharmaceutical compounds:
+
+- Aspirin — CHEMBL25
+- Acetaminophen — CHEMBL112
+- Ibuprofen — CHEMBL521
+
+The dashboard includes molecular weight comparisons, an average molecular weight KPI, and a compound information table containing ChEMBL identifiers and molecular formulas.
+
+[![PharmaLab Pharmaceutical Compound Analysis Dashboard](docs/images/compound_analysis_dashboard.png)](https://public.tableau.com/app/profile/phillarica.monique.neal/viz/PharmaLabScientificAnalyzer_CompoundAnalysis/Dashboard1)
+
+**[Open Interactive Compound Analysis Dashboard](https://public.tableau.com/app/profile/phillarica.monique.neal/viz/PharmaLabScientificAnalyzer_CompoundAnalysis/Dashboard1)**
+
+### Dashboard 2 — Cancer Gene Expression Analysis
+
+**Data Source:** National Cancer Institute Genomic Data Commons  
+**Research Project:** TCGA-BRCA — Breast Invasive Carcinoma  
+**Dataset:** Single RNA-seq sample  
+**Technologies:** Python, pandas, NCI GDC REST API, Tableau Public
+
+This dashboard examines gene-expression measurements for five cancer-associated genes: ERBB2, TP53, MKI67, BRCA1, and BRCA2.
+
+**Dashboard Features**
+
+- Total genes analyzed: **5**
+- Highest-expressed selected gene: **ERBB2**
+- Maximum measured TPM: **257.43**
+- Horizontal gene-expression comparison chart
+- Gene details table with Ensembl identifiers and gene classifications
+- Data source, methodology, and research limitations
+
+[![PharmaLab Cancer Gene Expression Dashboard](docs/images/cancer_gene_expression_dashboard.png)](https://public.tableau.com/app/profile/phillarica.monique.neal/viz/PharmaLab_Cancer_Gene_Expression/PharmaLabCancerGeneExpressionDashboard)
+
+**[Open Interactive Cancer Gene Expression Dashboard](https://public.tableau.com/app/profile/phillarica.monique.neal/viz/PharmaLab_Cancer_Gene_Expression/PharmaLabCancerGeneExpressionDashboard)**
+
+**Scientific Interpretation:** Gene expression is reported using Transcripts Per Million (TPM), extracted from STAR gene-count output. The dashboard presents five selected genes from one TCGA-BRCA RNA-seq sample, not the complete cancer cohort.
+
+Gene-expression measurements alone do not establish mutation status, clinical HER2 status, cancer subtype, or treatment response.
+
+### Scientific Data Visualization Workflow
+
+**Scientific APIs → Python Processing → Data Validation → CSV Exports → Tableau Dashboards**
+
+Both dashboards demonstrate how scientific software engineering connects biomedical data acquisition, computational analysis, and interactive visualization.
+
+---
+
+## 3. Technologies and Development Tools
 
 ### Programming and Data Analysis
 
@@ -68,7 +125,7 @@ This project is developed as part of an ongoing scientific software engineering 
 
 ---
 
-## 3. Current Features
+## 4. Current Features
 
 ### Pharmaceutical Compound Analysis
 
@@ -92,12 +149,13 @@ This project is developed as part of an ongoing scientific software engineering 
 - Identify gene names, Ensembl gene identifiers, gene types, and expression measurements.
 - Exclude sequencing summary rows from gene-level analysis.
 - Extract expression measurements for selected cancer-associated genes.
-- Sort gene-expression results using Transcripts Per Million (TPM).
+- Sort gene-expression results using TPM.
 - Export selected gene-expression measurements to CSV.
+- Visualize selected gene-expression measurements through Tableau.
 
 ---
 
-## 4. Pharmaceutical Compound Analysis
+## 5. Pharmaceutical Compound Analysis
 
 The initial PharmaLab workflow focuses on retrieving and comparing molecular properties of pharmaceutical compounds.
 
@@ -122,7 +180,7 @@ These properties provide a foundation for exploring molecular characteristics re
 
 ### Workflow
 
-1. Connect to the ChEMBL API.
+1. Connect to the ChEMBL REST API.
 2. Retrieve compound information using ChEMBL identifiers.
 3. Extract selected molecular properties.
 4. Organize results into pandas DataFrames.
@@ -134,7 +192,7 @@ These properties provide a foundation for exploring molecular characteristics re
 
 ---
 
-## 5. Cancer Gene Expression Analysis
+## 6. Cancer Gene Expression Analysis
 
 PharmaLab has been expanded to include cancer genomics research using publicly available datasets from the National Cancer Institute's Genomic Data Commons.
 
@@ -146,10 +204,10 @@ PharmaLab has been expanded to include cancer genomics research using publicly a
 **Data Type:** RNA-seq Gene Expression Quantification  
 **File Format:** TSV
 
-The initial dataset contains:
+### Dataset Characteristics
 
 | Dataset Characteristic | Value |
-|---|---|
+|---|---:|
 | Total rows | 60,664 |
 | Total columns | 9 |
 | RNA-seq files discovered | 5 |
@@ -216,7 +274,7 @@ These results are descriptive measurements from a single sample. They do not est
 
 ---
 
-## 6. Project Structure
+## 7. Project Structure
 
 ```text
 PharmaLab-Scientific-Analyzer/
@@ -243,6 +301,11 @@ PharmaLab-Scientific-Analyzer/
 │   ├── compound_comparison.csv
 │   └── tcga_brca_gene_expression.csv
 │
+├── docs/
+│   └── images/
+│       ├── compound_analysis_dashboard.png
+│       └── cancer_gene_expression_dashboard.png
+│
 ├── Tableau dashboards/
 │
 ├── main.py
@@ -253,11 +316,13 @@ PharmaLab-Scientific-Analyzer/
 
 The `data/gdc/` directory stores downloaded RNA-seq datasets locally. Raw datasets are excluded from Git version control.
 
-The repository includes exported analysis results and source code so that the scientific workflows can be reviewed and reproduced.
+The repository includes exported analysis results and source code so the scientific workflows can be reviewed and reproduced.
+
+The `docs/images/` directory contains the screenshots used for the clickable Tableau dashboard previews in this README.
 
 ---
 
-## 7. Installation and Setup
+## 8. Installation and Setup
 
 ### Prerequisites
 
@@ -268,14 +333,14 @@ The repository includes exported analysis results and source code so that the sc
 
 ### Clone the Repository
 
-```bash
+```powershell
 git clone https://github.com/PhillaricaM/PharmaLab-Scientific-Analyzer.git
 cd PharmaLab-Scientific-Analyzer
 ```
 
 ### Create a Virtual Environment
 
-```bash
+```powershell
 python -m venv .venv
 ```
 
@@ -287,25 +352,25 @@ Activate the environment in Windows PowerShell:
 
 ### Install Dependencies
 
-```bash
+```powershell
 python -m pip install -r requirements.txt
 ```
 
 ---
 
-## 8. Running the Scientific Workflows
+## 9. Running the Scientific Workflows
 
 ### Pharmaceutical Compound Analysis
 
 Retrieve compound information from ChEMBL:
 
-```bash
+```powershell
 python src/chembl_api.py
 ```
 
 Run the compound comparison workflow:
 
-```bash
+```powershell
 python src/compare_compounds.py
 ```
 
@@ -313,13 +378,13 @@ python src/compare_compounds.py
 
 Retrieve GDC project information, discover gene-expression files, and download an open-access dataset:
 
-```bash
+```powershell
 python src/gdc_api.py
 ```
 
 Analyze the downloaded RNA-seq dataset:
 
-```bash
+```powershell
 python src/gene_expression_analysis.py
 ```
 
@@ -327,13 +392,13 @@ The gene-expression analysis script loads a locally downloaded TSV dataset, insp
 
 ### Automated Testing
 
-```bash
+```powershell
 python -m pytest tests/
 ```
 
 ---
 
-## 9. Data Validation and Testing
+## 10. Data Validation and Testing
 
 PharmaLab includes a data-validation module designed to identify common problems in experimental datasets.
 
@@ -359,40 +424,6 @@ Automated tests are implemented using pytest.
 
 ---
 
-## 10. Scientific Data Visualization
-
-PharmaLab uses Tableau to present scientific data in an accessible and interpretable format.
-
-### Completed
-
-**Pharmaceutical Compound Dashboard**
-
-- Molecular property comparisons
-- Compound analysis summaries
-- Scientific data visualization using exported CSV datasets
-
-### Upcoming
-
-**Cancer Gene Expression Dashboard**
-
-Planned features include:
-
-- Cancer-associated gene-expression bar charts
-- TPM comparisons
-- Gene-expression summary tables
-- Interactive gene selection and filtering
-- Dataset metadata and research context
-
-### Future Visualization Development
-
-- Multi-sample gene-expression comparisons
-- Tumor versus normal tissue visualizations
-- Gene-expression distributions
-- Scientific statistical summaries
-- Interactive research dashboards
-
----
-
 ## 11. Development Progress and Accomplishments
 
 ### Phase 1 — Project Setup and Python Environment
@@ -408,7 +439,7 @@ Planned features include:
 
 ### Phase 2 — Pharmaceutical Data Integration
 
-**Status: Completed**
+**Status: Completed for initial scope**
 
 - Connected to the ChEMBL REST API.
 - Retrieved pharmaceutical compound information.
@@ -417,14 +448,14 @@ Planned features include:
 - Organized results using pandas.
 - Exported compound analysis results to CSV.
 
-### Phase 3 — Data Validation and Visualization
+### Phase 3 — Data Validation and Compound Visualization
 
 **Status: Completed for initial scope**
 
 - Implemented experimental data-validation functions.
 - Developed automated pytest tests.
 - Created pharmaceutical compound visualizations in Tableau.
-- Established a workflow for exporting scientific results.
+- Published the interactive Compound Analysis dashboard.
 
 ### Phase 4 — Cancer Genomics API Integration
 
@@ -450,19 +481,20 @@ Planned features include:
 - Exported the analysis to CSV.
 - Published the updated scientific code and results to GitHub.
 
+### Phase 6 — Cancer Gene Expression Visualization
+
+**Status: Completed for initial scope**
+
+- Created a Tableau cancer gene-expression dashboard.
+- Visualized TPM measurements for five selected cancer-associated genes.
+- Developed gene-expression KPI worksheets.
+- Created a gene-expression details table.
+- Documented dataset sources, methodology, and analytical limitations.
+- Published the interactive Cancer Gene Expression dashboard to Tableau Public.
+
 ---
 
 ## 12. Development Roadmap
-
-### Phase 6 — Cancer Gene Expression Visualization
-
-**Status: Next**
-
-- Create a Tableau gene-expression dashboard.
-- Visualize TPM measurements for selected genes.
-- Develop gene-expression summary tables.
-- Document dataset sources and analytical limitations.
-- Publish visualization artifacts and update the portfolio documentation.
 
 ### Phase 7 — Multi-Sample Cancer Genomics
 
@@ -562,7 +594,7 @@ Gene-expression measurements alone cannot establish clinical diagnoses, mutation
 
 Future multi-sample analysis will require suitable metadata, biological replication, statistical methods, and careful interpretation.
 
-The software is not intended for clinical decision-making.
+**The software is not intended for clinical decision-making.**
 
 ---
 
@@ -582,8 +614,8 @@ The software is not intended for clinical decision-making.
 
 Scientific Software Engineering | Python | C++ | Pharmaceutical Research | Computational Oncology | Bioinformatics
 
-GitHub: https://github.com/PhillaricaM
+GitHub: [https://github.com/PhillaricaM](https://github.com/PhillaricaM)
 
 **Project Status:** Active Development
 
-**Current Development Priority:** Cancer Gene Expression Visualization and Multi-Sample Genomic Analysis
+**Current Development Priority:** Multi-Sample Cancer Genomics, Advanced Scientific Analysis, and Continued PharmaLab Development
